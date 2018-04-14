@@ -13,7 +13,7 @@ public class Stack {
 	}
 
 	private Node top;
-	private void push(int data){
+	public void push(int data){
 		Node n = new Node(data);
 		if(top == null){
 			top = n;
@@ -24,9 +24,19 @@ public class Stack {
 		}
 	}
 
-	private void pop(){
+	public boolean isEmpty(){
+		if(top == null){
+			return true;
+		}
+		else{
+			return false;
+		}
+	}
+	public int pop(){
 		
+		int data = top.data;
 		top = top.next;
+		return data;
 	}
 
 	public void print(){

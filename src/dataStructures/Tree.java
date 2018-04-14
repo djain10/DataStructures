@@ -46,10 +46,43 @@ public class Tree {
 			
 		}
 		
+		public void inorder(){
+			if( left!=null){
+				left.inorder();				
+			}
+			System.out.println(data);
+			if(right!=null){
+				right.inorder();
+			}
+		}
+		
+		public void preorder(){
+			System.out.println(data);
+			if( left!=null){
+				left.inorder();				
+			}
+			
+			if(right!=null){
+				right.inorder();
+			}
+		}
 
+		public void postorder(){
+			
+			if( left!=null){
+				left.inorder();				
+			}
+			
+			if(right!=null){
+				right.inorder();
+			}
+			System.out.println(data);
+		}
 	}
 	public static void main(String[] args) {
-
+		
+		Node n;
+		
 
 	}
 
